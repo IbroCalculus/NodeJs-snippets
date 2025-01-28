@@ -7,14 +7,40 @@ Whereas Python libraries are hosted on PyPI (Python Package Index). Node.js libr
 
 ============ INSTALLING PACAKGE ==============
 npm install <package_name>
+npm install <package1_name> <package2_name> <package3_name>
 
 ============ CREATING PACAKGE ==============
-create a directory for the package and a file in it (ie index.js)
+create a directory for the package and an entry point file in it; index.js
 
 In CMD:
 npm init            // And follow the steps. After completion, this will create a package.json file in your current directory.
  OR
- npm init -y         // Use this if you don't want to answer any questions. This will create a package.json file with default values.
+npm init -y         // Use this if you don't want to answer any questions. This will create a package.json file with default values.
+
+NB: You can also use the npm command to install packages into the package. ie; loadash, csv-generate ie
+
+
+------------- Within index.js (Its entry point) -------------
+
+const loadash = require('lodash');
+
+const names = ['John', 'Rabiu', 'Michael', "Jamil"];
+const capitalized = loadash.map(names, loadash.capitalized);
+
+console.log(capitalized);
+
+
+----------------
+Within the package.json, add the following: "start": "node index.js". 
+ie:
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"                                  // THIS LINE
+  },
+
+============ PUBLISHING PACAKGE ==============
+
 
 
  */
