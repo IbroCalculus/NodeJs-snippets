@@ -1,4 +1,4 @@
-Make sure nodejs already installed on machine. Check in cmd via command: nodejs
+Make sure nodejs already installed on machine. Check in cmd via command: node --version
 
 ======= Running a javascript file (ie test.js) =====
   --test.js --
