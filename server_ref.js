@@ -8,6 +8,16 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200; // HTTP status code (200 = OK)
     res.setHeader('Content-Type', 'text/plain');
     res.end('Hello, World!\n');
+
+    // console.log(req); // Log the entire request object
+    // console.log(req.headers); // Log the headers of the incoming request
+    // console.log(req.url); // Log the URL of the incoming request
+    // console.log(res); // Log the entire response object
+
+    
+    // process.exit();
+    // This will terminate the server immediately after responding to the first request. In a real-world scenario, you might want to handle this more gracefully.
+
 });
 
 server.listen(3000, '127.0.0.1', () => {
