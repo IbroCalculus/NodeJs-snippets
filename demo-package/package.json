@@ -13,6 +13,7 @@
   "description": "",
   "dependencies": {
     "csv-generate": "^4.4.2",
+    "demo-package": "file:",
     "lodash": "^4.17.21"
   }
 }
