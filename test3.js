@@ -1,2 +1,2 @@
-fs = require('fs');
-fs.writeFileSync("text.txt", "This is just a simple example");
+const lodash = require('lodash');
+console.log(lodash.VERSION);

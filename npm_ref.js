@@ -5,7 +5,11 @@ Both are package managers that allow you to manage and install libraries or depe
 
 Whereas Python libraries are hosted on PyPI (Python Package Index). Node.js libraries are hosted on the npm registry.
 
-============ INSTALLING PACAKGE ==============
+npm list -g --depth=0   // view all installed packages globally. NB: --depth=0: Limits the output to only top-level dependencies (ignores nested dependencies). It can be omitted.
+npm list --depth=0      // view all installed packages locally 
+
+============ INSTALLING PACKAGE ==============
+npm install       // This will install the package in the current directory listed in package.json. It will also create a node_modules folder in the current directory.
 npm install <package_name>
 npm install <package1_name> <package2_name> <package3_name>
 

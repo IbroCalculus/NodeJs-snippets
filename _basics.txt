@@ -1,10 +1,12 @@
 Make sure nodejs already installed on machine. Check in cmd via command: node --version
 
+install nodemon globally to help with server reload: npm install -g nodemon
+
 ======= Running a javascript file (ie test.js) =====
   --test.js --
    console.log(`This is test.js file`);
 
-Run via command: node test.js
+Run via command: node test.js OR nodemon test.js if nodemon package is installed to enable auto relaod.
 
 
 

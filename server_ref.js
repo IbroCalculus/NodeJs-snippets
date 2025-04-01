@@ -1,5 +1,7 @@
 /*
 
+NB: server_ref2.js is about returning html pages from the server. It uses the fs module to read HTML files and send them as responses to HTTP requests. The server listens on port 3000 and serves different HTML files based on the requested URL.
+
 ======= 1. Creating an HTTP Server =========
 
 const http = require('http');
@@ -7,6 +9,7 @@ const http = require('http');
 const server = http.createServer((req, res) => {
     res.statusCode = 200; // HTTP status code (200 = OK)
     res.setHeader('Content-Type', 'text/plain');
+    res.write("Hello, world from the server\n");
     res.end('Hello, World!\n');
 
     // console.log(req); // Log the entire request object
