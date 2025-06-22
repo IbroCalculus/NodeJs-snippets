@@ -14,7 +14,11 @@ var server = http.createServer(function(req, res) {
 });
 
 
+
 ======== 2. Create Your Own Modules (CHECK 2b below to see a second method of exporting) ===========
+NB: There are two methods of exporting modules; CommonJS and ES6. The example below uses CommonJS. 3 uses ES6.
+
+
 You can create your own modules, and easily include them in your applications. The following example creates a module that returns a date and time object:
 
 // createDateModule.js
@@ -67,6 +71,31 @@ var calc = require('./calculator');
 console.log(calc.add(2, 3)); // Outputs: 5
 console.log(calc.subtract(5, 2)); // Outputs: 3
 console.log(calc.multiply(3, 2)); // Outputs: 6
+
+
+
+======== 3. Using ES6 Modules ===========
+
+// myModule.js
+export function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+export function add(a, b) {
+  return a + b;
+}
+
+export function subtract(a, b) {
+  return a - b;
+}
+
+// ----- Include the module in any file (ie index.js) -----
+
+import { greet, add, subtract } from "./myModule.js";
+console.log(greet("World"));
+console.log(add(5, 3));
+console.log(subtract(10, 4));
+
 
 
 

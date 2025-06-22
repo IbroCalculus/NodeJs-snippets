@@ -2,6 +2,8 @@ Make sure nodejs already installed on machine. Check in cmd via command: node --
 
 install nodemon globally to help with server reload: npm install -g nodemon
 
+NB: Better to create a package.json on start of project using "npm init -y" command.
+
 ======= Running a javascript file (ie test.js) =====
   --test.js --
    console.log(`This is test.js file`);
