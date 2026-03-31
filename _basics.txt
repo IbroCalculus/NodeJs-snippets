@@ -4,6 +4,16 @@ install nodemon globally to help with server reload: npm install -g nodemon
 
 NB: Better to create a package.json on start of project using "npm init -y" command.
 
+
+    - npm install nodemon --save-dev (To use nodemon within project / if nodemon already installed globally on machine, no need)
+    - begin by initiating package.json via: npm init -y
+    - execute via: node index.js or nodemon index.js OR modify package.json "scripts": { as shown below:              
+        "scripts": {
+          "start": "nodemon _basics.js",
+          "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        and execute via: npm start
+
 ======= Running a javascript file (ie test.js) =====
   --test.js --
    console.log(`This is test.js file`);
